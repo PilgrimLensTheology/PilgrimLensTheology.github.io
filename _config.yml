@@ -1,0 +1,27 @@
+title: Free Theology Library
+description: Biblically sound and edifying sermons. This is not for private use. Do not charge for the material.
+Do not make any changes to the content.
+Our source is www.spurgeongems.org.
+url: "" # e.g. https://<username>.github.io
+baseurl: "" # e.g. /theology-library if using a project site
+theme: null
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+collections:
+  authors:
+    output: true
+    permalink: /authors/:slug/
+  writings:
+    output: true
+    permalink: /writings/:slug/
+
+defaults:
+  - scope: { path: "_writings" }
+    values: { layout: writing }
+  - scope: { path: "_authors" }
+    values: { layout: author }
